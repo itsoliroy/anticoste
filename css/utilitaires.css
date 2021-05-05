@@ -11,6 +11,7 @@
     /** Démo variables [m99] **/
     /* les caractères */
     --m99-fonte-principale: 'Libre Franklin', sans-serif;
+    --m99-fonte-titres: 'Libre Franklin', sans-serif;
     --m99-fonte-ancienne:'Libre Baskerville', serif;
     /* les couleurs */
     --m99-couleur-background: rgba(50, 50, 50, 0.9);
