@@ -110,7 +110,7 @@ header{
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
-    background-image: url("../images/m99/carte-navigation_1200.jpg");
+    background-image: url("../images/m15/ii-00BG-m15_1200.jpg");
     background-size: cover;
 }
 .rose-des-vents .conteneur{
@@ -237,7 +237,7 @@ figure{
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte{
-    background-image: url("../demo-recit/images/i-txt-m99.jpg");
+    background-image: url("../recit-2/images/ii-txt-m15_1200.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
