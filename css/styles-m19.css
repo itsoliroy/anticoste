@@ -19,12 +19,22 @@
 
 /* Charte typographique
    ========================================================================== */
+h1 {
+    font-family: Zapfino;
+    color: #FFFAF3;
+}
+.h4 {
+    color: black;
+}
+.pagination{
+    font-family: Zapfino;
+}
 
 /* Styles de base
    ========================================================================== */
 body{
     color: aliceblue;
-    background-color: #000;
+    background-color: #FFFAF3;
 }
 blockquote{
     margin:0;
@@ -33,6 +43,7 @@ blockquote{
 /* Grille de mise en page
    ========================================================================== */
 body{
+    background-color: #FFFAF3;
     display: flex;
     flex-flow:column wrap;
     min-height: 100vh;
@@ -44,7 +55,7 @@ main.conteneur{
 header,
 footer {
     color: aliceblue;
-    background-color: rgba(50,50,50,1);
+    background-color: #FFFAF3;
     position: fixed;
     width: 100%;
     z-index: 5;
@@ -66,13 +77,16 @@ header{
 
 /* navigations menu principal*/
 .nav--menu .nav__list {
+    color: #657453;
+    border-bottom: solid 2px #657453;
     display: flex;
     justify-content: center;
     margin:0;
 }
 
 .nav--menu .nav__link {
-    color: aliceblue;
+    color: #657453;
+    font-weight: bold;
     display: inline-block;
     padding: 1rem 1rem;
     text-decoration: none;
@@ -86,7 +100,9 @@ header{
     }
 }
 .nav--menu .nav__link:hover {
+    transition: 0.5s;
     text-decoration: underline;
+    color: #B9D398;
 }
 .nav--menu .switch:hover {
     transform: scale(2.25);
@@ -94,11 +110,9 @@ header{
     transition: all 0.3s;
 }
 .nav--menu .nav__link--active {
-    color:#ecf4f8;
-    border-bottom: 5px solid #ecf4f8;
-    background: rgb(236,244,248);
+    color:#B9D398;
+    background: #657453;
     /* tests et code du dégradé faits avec https://cssgradient.io/ */
-    background: linear-gradient(0deg, rgba(236,244,248,1) 0%, rgba(157,177,194,1) 3%, rgba(67,67,67,1) 30%);
     /*background-color: #434343;*/
 }
 .pagination{
@@ -108,7 +122,7 @@ header{
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
-    background-image: url("../images/m19/carte-navigation_1200.jpg");
+    background-image: url("../images/m19/cartev2_noir-blanc.jpg");
     background-size: cover;
 }
 .rose-des-vents .conteneur{
@@ -154,7 +168,7 @@ header{
 }
 
 .nav--recits .nav__link {
-    color: #c8a78c;
+    color: #657453;
     text-decoration: none;
     display: block;
     padding-right: 4rem;
@@ -167,13 +181,13 @@ header{
 
 .nav--recits .nav__link:hover {
     text-decoration: underline;
-    color: #b22a2a; /* la dominante dans la main */
+    color: #B9D398; /* la dominante dans la main */
     font-size: 2.15rem;
-    background-image: url("../images/m19/main.png");
+    background-image: url("../recit-6/images/compass-symbol-survol.svg");
     background-position: right;
-    background-size: 3.5rem;
+    background-size: 3rem;
     background-repeat: no-repeat;
-    transition: font-size 0.3s;
+    transition: font-size 0.5s;
 }
 
 /* Niveau 2 - Gabarit page Titre
@@ -214,8 +228,8 @@ figure{
     margin-bottom:10rem;
 }
 .photo figcaption {
-    color: aliceblue;
-    background-color: #434343;
+    color: black;
+    background-color: whitesmoke;
     padding: 2rem;
 }
 @media (min-width: 600px) {
@@ -235,7 +249,7 @@ figure{
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte{
-    background-image: url("../demo-recit/images/i-txt-m99.jpg");
+    background-image: url("../demo-recit/images/i-txt-m19.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
