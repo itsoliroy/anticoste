@@ -42,8 +42,8 @@
    --color-main: #0F242F; /* bleu foncé*/
    --color-secondary1: #FFB703;  /* Jaune éléments intéractifs*/
    --color-secondary2: #FB8500;  /* Orange HOVER éléments intéractifs*/
-   --color-text1: #FFF;
-   --color-text2: #8ECAE6;
+   --color-text1: #FFF; /* Blanc texte principale*/
+   --color-text2: #8ECAE6; /* Bleu pâle texte secondaire*/
 
    --font-family1: 'Poppins', sans-serif;
    --font-size-texte: 1.6rem;
