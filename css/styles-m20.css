@@ -235,9 +235,6 @@ footer {
    background: url(/images/m20/vii-header-m20.jpg) no-repeat scroll;
    background-position: top;
    background-size: 100vw;
-   -webkit-background-size: 100vw;
-   -moz-background-size: 100vw;
-   -o-background-size: 100vw;
 }
 
 /*  Grid */
