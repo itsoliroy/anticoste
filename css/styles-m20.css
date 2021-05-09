@@ -56,17 +56,22 @@ b {
 a {
    text-decoration: none;
    color: var(--color-text1);
+   font-size: var(--font-size-p);
 }
 
 a:hover {
    text-decoration: none;
-   color: var(--color-text3);
+   color: var(--color-text1);
+   text-decoration: underline;
+   text-decoration-color: var(--color-text3);
+
 }
 
 .logo {
    font-size: var(--font-size-logo);
    font-weight: bold;
    color: var(--color-text1);
+   margin: 0;
 }
 
 .texte-contenu {
@@ -89,6 +94,19 @@ a:hover {
 
 .txt-center {
    text-align: center;
+}
+
+p {
+   margin: 3em 0;
+}
+
+@media (min-width: 600px) {
+   p {
+      margin: 0;
+   }
+   .logo {
+      margin: 0;
+   }
 }
 
 /* Styles de base,  basic reset  & reset normalize
@@ -145,8 +163,8 @@ a:hover {
    --font-size-recit-pagination: 1.6rem;
    --font-size-pages-pagination: 1.8rem;
 
-   --font-size-nav-footer: 1.6rem;
-   --font-size-nav-footer-actif: 2rem;
+   --font-size-nav-footer: 2.4rem;
+   --font-size-nav-footer-actif: 3.2rem;
 
 
    /*  Height & width  mobile*/
@@ -180,29 +198,37 @@ a:hover {
       --font-size-pages-pagination: 2rem;
 
       --font-size-nav-footer: 2.8rem;
-      --font-size-nav-footer-actif: 3.2rem;
+      --font-size-nav-footer-actif: 3.6rem;
 
 
    }
 
+   body {
+      margin: 0;
+   }
 }
 
 
 /* Utilitaires + navigation entete */
+
+
+@media (min-width: 600px) {
+   
+   }
 
 header {
    max-width: 1000px;
    margin-left: auto;
    margin-right: auto;
    padding-top: 5vh;
+   padding-left: 4em;
+   padding-right: 4em;
 }
 
 nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   max-height: 15vh;
-   padding: 4em;
 }
 .nav--footer {
    font-size: var(--font-size-nav-footer);
@@ -229,19 +255,43 @@ li {
 }
 
 .footer-accueil {
-   max-width: 1000px;
-margin: 10vh auto;
+   padding: 5em 5em 0 5em;
+   text-align: center;
+
 }
 
 .footer-accueil .logo{
-padding: 0 0 5vh 0;
+padding: 0 0 .5em 0;
 }
-
 .footer-flex {
    display: flex;
-   justify-content: space-between;
-   align-items: flex-end;
-   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
+}
+
+
+
+@media (min-width: 1000px) {
+   .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      flex-direction: row;
+
+   }
+   .footer-accueil {
+      max-width: 1000px;
+   margin: 10vh auto;
+   text-align: left;
+
+   }
+   .footer-accueil .logo{
+      padding: 0;
+      margin-bottom: 1em;
+      }
 }
 
 .footer-img-txt {
@@ -278,6 +328,14 @@ padding: 0 0 5vh 0;
    background-size: 100vw;
 }
 
+.grid-a {
+   padding-top: 5vh;
+}
+
+.grid-c {
+display: none;
+}
+
 /*  Grid */
 @media (min-width: 600px) {
    .grid-accueil {
@@ -299,6 +357,8 @@ padding: 0 0 5vh 0;
       grid-area: a;
       margin-top: 20vh;
       margin-bottom: 5vh;
+      padding-top: 0;
+
    }
 
    .grid-b {
@@ -308,9 +368,12 @@ padding: 0 0 5vh 0;
    }
 
    .grid-c {
+      display: block;
       grid-area: c;
       margin-top: 5vh;
       margin-bottom: 10vh;
+      /* transform: translate(0%, -50%); */
+
    }
 
    .grid-d {
@@ -347,6 +410,9 @@ padding: 0 0 5vh 0;
    max-width: 1000px;
    margin-left: auto;
    margin-right: auto;
+   padding: 0 5em;
+   display: flex;
+   flex-direction: column;
 }
 
 .section2 {
@@ -355,23 +421,34 @@ padding: 0 0 5vh 0;
    margin: 0;
 }
 
+
+
+
+
 @media (min-width: 600px) {
-   .section-cols {
-      flex-wrap: nowrap;
+   .section1 {
+      padding: 0 ;
+      display: grid;
    }
 }
 
 .section-cols {
-   display: flex;
-   justify-content: space-evenly;
-   align-items: flex-start;
-   text-align: center;
-   margin-top: 5vh;
-   margin-bottom: 5em;
-   flex-wrap: wrap;
-   max-width: 1000px;
-   margin-left: auto;
-   margin-right: auto;
+   display: none;
+}
+
+@media (min-width: 600px) {
+   .section-cols {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      text-align: center;
+      margin-top: 5vh;
+      margin-bottom: 5em;
+      flex-wrap: nowrap;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+   }
 }
 
 .col1,
@@ -396,6 +473,7 @@ padding: 0 0 5vh 0;
    border: none;
    width: fit-content;
    margin-top: 2em;
+   align-self: center;
 }
 
 .btn:hover {
@@ -443,6 +521,7 @@ padding: 0 0 5vh 0;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
+
 }
 
 /*  Navigation contenu */
