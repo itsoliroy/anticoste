@@ -25,34 +25,45 @@
 
 /* Typographie
    ========================================================================== */
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /*  Setup typo */
 .h1 {
    font-size: var(--font-size-h1);
    color: var(--color-text1);
 }
+
 .h2 {
    font-size: var(--font-size-h2);
    color: var(--color-text3);
 }
+
 .h3 {
    font-size: var(--font-size-h3);
    color: var(--color-text1);
 }
-.p, b {
+
+b {
+   font-weight: bold;
+}
+
+.p,
+b {
    font-size: var(--font-size-p);
    color: var(--color-text1);
 }
+
 a {
    text-decoration: none;
    color: var(--color-text1);
 }
+
 .logo {
    font-size: var(--font-size-logo);
    font-weight: bold;
    color: var(--color-text1);
 }
+
 .texte-contenu {
    font-size: var(--font-size-texte-contenu);
    color: var(--color-text1);
@@ -66,37 +77,55 @@ a {
 }
 
 .pages-pagination {
-    font-size: var(--font-size-pages-pagination);
-    color: var(--color-text2);
-    margin: 0;
+   font-size: var(--font-size-pages-pagination);
+   color: var(--color-text2);
+   margin: 0;
 }
-   
+
 .txt-center {
    text-align: center;
 }
 
-/* Styles de base et reset normalize
+/* Styles de base,  basic reset  & reset normalize
    ========================================================================== */
-   @import "normalize.css";
-   @import "utilitaires.css";
-   
-   /* Grille de mise en page
+/* @import "normalize.css"; */
+/* @import "utilitaires.css"; */
+
+* {
+   padding: 0;
+   margin: 0;
+   font-size: 62.5%;
+   font-weight: 400;
+   line-height: 150%;
+   font-family: var(--font-family1);
+}
+
+/* Grille de mise en page
    ========================================================================== */
-   @import "grille.css";
+/* @import "grille.css"; */
+
 
 /* Variables  & Font sizes, family, weight, line-height, etc.   !!!!!! MOBILE FIRST !!!!!!
    ========================================================================== */
 :root {
    /*  Colors */
-   --color-main: #0F242F; /* bleu foncé*/
-   --color-secondary1: #FFB703;  /* Jaune éléments intéractifs*/
-   --color-secondary2: #FB8500;  /* Orange HOVER éléments intéractifs*/
-   --color-text1: #FFF; /* Blanc texte principale*/
-   --color-text2: #8ECAE6; /* Bleu pâle texte secondaire*/
-   --color-text3: #FFB703; /* Jaune texte secondaire*/
+   --color-main: #0F242F;
+   /* bleu foncé*/
+   --color-secondary1: #FFB703;
+   /* Jaune éléments intéractifs*/
+   --color-secondary2: #FB8500;
+   /* Orange HOVER éléments intéractifs*/
+   --color-text1: #FFF;
+   /* Blanc texte principale*/
+   --color-text2: #8ECAE6;
+   /* Bleu pâle texte secondaire*/
+   --color-text3: #FFB703;
+   /* Jaune texte secondaire*/
 
    /*  Font  family */
    --font-family1: 'Poppins', sans-serif;
+
+   /*  MOBILE */
 
    /*  Font sizes mobile*/
    --font-size-logo: 4.5rem;
@@ -114,18 +143,20 @@ a {
 
    /*  Height & width  mobile*/
    --height-elements: 45px;
-   --width-elements:45px;
-   --height-elements: 60px;
-   --width-elements:60px;
+   --width-elements: 45px;
+   --height-elements-nav: 60px;
+   --width-elements-nav: 60px;
 }
 
-/*  Desktop */
+/*  DESKTOP */
 @media (min-width: 600px) {
-   :root{
+   :root {
 
       /*  Height & width desktop*/
       --height-elements: 60px;
-      --width-elements:60px;
+      --width-elements: 60px;
+      --height-elements-nav: 100px;
+      --width-elements-nav: 100px;
 
       /*  Font sizes desktop*/
       --font-size-logo: 4.8rem;
@@ -142,16 +173,8 @@ a {
 
    }
 
- }
-
-
-
-* {
-   font-size: 62.5%;
-   font-weight: 400;
-   line-height: 150%;
-   font-family: var(--font-family1);
 }
+
 
 /* Utilitaires + navigation entete */
 
@@ -159,6 +182,7 @@ header {
    max-width: 1000px;
    margin-left: auto;
    margin-right: auto;
+   padding-top: 5vh;
 }
 
 nav {
@@ -173,7 +197,7 @@ nav {
    nav {
       padding: 0;
    }
- }
+}
 
 li {
    list-style-type: none;
@@ -207,101 +231,114 @@ footer {
 /* Niveau 1 - Accueil
    ====================== */
 
-   /*  Grid */
-   @media (min-width: 600px) {
-   .main-accueil {
+.bg-accueil {
+   background: url(/images/m20/vii-header-m20.jpg) no-repeat scroll;
+   background-position: top;
+   background-size: 100vw;
+   -webkit-background-size: 100vw;
+   -moz-background-size: 100vw;
+   -o-background-size: 100vw;
+}
+
+/*  Grid */
+@media (min-width: 600px) {
+   .grid-accueil {
       display: grid;
       grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
       grid-gap: 1em;
       grid-template-areas:
-          ". a a a a "
-          ". b b b ."
-          ". . c . ."
-          "e e d d d"
-          "f f f g g"
-          ". h h h ."
-          "i i i i i"
-          ". j j j .";
-  }
+         ". a a a a "
+         ". b b b ."
+         ". . c . ."
+         "e e d d d"
+         "f f f g g"
 
-  /*  Grid names */
+   }
 
-  .a {
-   grid-area: a;
-   margin-top: 20vh;
-   margin-bottom: 5vh;
-  }
-  .b {
-   grid-area: b;
-   margin-top: 5vh;
-   margin-bottom: 5vh;
-  }
-  .c {
-   grid-area: c;
-   margin-top: 5vh;
-   margin-bottom: 10vh;
-  }
-  .d {
-   grid-area: d;
-   margin-top: 10vh;
-   margin-bottom: 10vh;
-  }
-  .e {
-   grid-area: e;
-   margin-top: 10vh;
-   margin-bottom: 10vh;
-  }
-  .f {
-   grid-area: f;
-   margin-top: 10vh;
-   margin-bottom: 10vh;
-  }
-  .g {
-   grid-area: g;
-   margin-top: 10vh;
-   margin-bottom: 10vh;
-  }
-  .h {
-   grid-area: h;
-   margin-top: 10vh;
-   margin-bottom: 10vh;
-  }
-  .i {
-   grid-area: i;
-   margin-top: 10vh;
-   margin-bottom: 10vh;
-  }
-  .j {
-   grid-area: j;
-   margin-top: 10vh;
-   margin-bottom: 10vh;
-  }
+   /*  Grid names */
+
+   .grid-a {
+      grid-area: a;
+      margin-top: 20vh;
+      margin-bottom: 5vh;
+   }
+
+   .grid-b {
+      grid-area: b;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+   }
+
+   .grid-c {
+      grid-area: c;
+      margin-top: 5vh;
+      margin-bottom: 10vh;
+   }
+
+   .grid-d {
+      grid-area: d;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+   }
+
+   .grid-e {
+      grid-area: e;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+   }
+
+   .grid-f {
+      grid-area: f;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+   }
+
+   .grid-g {
+      grid-area: g;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+   }
 
 }
-  .accueil {
-   max-width: 1000px;
-   margin-left: auto;
-   margin-right: auto;
+
+.accueil {
    background-color: var(--color-main);
 }
 
+.section1 {
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.section2 {
+   background-color: #132A35;
+   padding: 10vh 0;
+   margin: 0;
+}
+
 @media (min-width: 600px) {
-.section2 {
-   flex-wrap: nowrap;
+   .section-cols {
+      flex-wrap: nowrap;
+   }
 }
-}
-.section2 {
+
+.section-cols {
    display: flex;
    justify-content: space-evenly;
    align-items: flex-start;
    text-align: center;
-   margin-top: 2em;
+   margin-top: 5vh;
    margin-bottom: 5em;
-   background-color: #132A35;
    flex-wrap: wrap;
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
-.col1, .col2, .col3 {
+.col1,
+.col2,
+.col3 {
    max-width: 300px;
 }
 
@@ -310,11 +347,6 @@ footer {
 
 .btn {
    background: #FFB703;
-   background-image: -webkit-linear-gradient(top, #FFB703, #2980b9);
-   background-image: -moz-linear-gradient(top, #FFB703, #2980b9);
-   background-image: -ms-linear-gradient(top, #FFB703, #2980b9);
-   background-image: -o-linear-gradient(top, #FFB703, #2980b9);
-   background-image: linear-gradient(to bottom, #FFB703, #2980b9);
    -webkit-border-radius: 28;
    -moz-border-radius: 28;
    border-radius: 28px;
@@ -324,12 +356,23 @@ footer {
    padding: 10px 20px 10px 20px;
    text-decoration: none;
    border: none;
- }
- 
- .btn:hover {
+   width: fit-content;
+   margin-top: 2em;
+}
+
+.btn:hover {
    background: #FB8500;
    text-decoration: none;
- }
+}
+
+.btn-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   margin-left: auto;
+   margin-right: auto;
+}
 
 /* Niveau 1 - Rose des vents
    ====================== */
@@ -357,24 +400,24 @@ footer {
 }
 
 .bg-img-txt {
-   background: url(/images/m20/vii-img-m20.jpg) no-repeat center center fixed; 
+   background: url(/images/m20/vii-img-m20.jpg) no-repeat center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
 }
 
-   /*  Navigation contenu */
+/*  Navigation contenu */
 
-.arrow-left, .arrow-right {
+.arrow-left,
+.arrow-right {
    max-width: 200px;
-   
 }
 
 .arrow {
    fill: #FFB703;
-   width: 100px;
-   height: 100px;
+   width: var(--width-elements-nav);
+   height: var(--height-elements-nav);
 }
 
 .arrow:hover {
@@ -387,15 +430,10 @@ footer {
    max-width: 800px;
    margin-left: auto;
    margin-right: auto;
-   width: 100vh; 
-   height: 70vh; 
+   width: 100vh;
+   height: 70vh;
    /* background-color: #FB8500; */
    display: flex;
    justify-content: center;
    align-items: center;
 }
-
-   
-
-
-
