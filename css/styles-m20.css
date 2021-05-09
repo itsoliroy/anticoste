@@ -5,6 +5,7 @@
  *
  * TABLE DES MATIERES
  * Typographie
+ ******* Setup typo
  * Styles de base et reset normalize
  * Grille de mise en page
  * Variables  & Font sizes, family, weight, line-height, etc.
@@ -20,14 +21,59 @@
  ******* Background pages photo et texte
  ******* Navigation contenu
  ******* Contenu
- ******* Pagination bas de page  (footer)
  */
 
 /* Typographie
    ========================================================================== */
    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+/*  Setup typo */
+.h1 {
+   font-size: var(--font-size-h1);
+   color: var(--color-text1);
+}
+.h2 {
+   font-size: var(--font-size-h2);
+   color: var(--color-text3);
+}
+.h3 {
+   font-size: var(--font-size-h3);
+   color: var(--color-text1);
+}
+.p, b {
+   font-size: var(--font-size-p);
+   color: var(--color-text1);
+}
+a {
+   text-decoration: none;
+   color: var(--color-text1);
+}
+.logo {
+   font-size: var(--font-size-logo);
+   font-weight: bold;
+   color: var(--color-text1);
+}
+.texte-contenu {
+   font-size: var(--font-size-texte-contenu);
+   color: var(--color-text1);
+}
+
+.recit-pagination {
+   font-size: var(--font-size-recit-pagination);
+   color: var(--color-text1);
+   margin: 0;
+   margin-top: .5em;
+}
+
+.pages-pagination {
+    font-size: var(--font-size-pages-pagination);
+    color: var(--color-text2);
+    margin: 0;
+}
    
+.txt-center {
+   text-align: center;
+}
 
 /* Styles de base et reset normalize
    ========================================================================== */
@@ -41,30 +87,64 @@
 /* Variables  & Font sizes, family, weight, line-height, etc.   !!!!!! MOBILE FIRST !!!!!!
    ========================================================================== */
 :root {
+   /*  Colors */
    --color-main: #0F242F; /* bleu foncé*/
    --color-secondary1: #FFB703;  /* Jaune éléments intéractifs*/
    --color-secondary2: #FB8500;  /* Orange HOVER éléments intéractifs*/
    --color-text1: #FFF; /* Blanc texte principale*/
    --color-text2: #8ECAE6; /* Bleu pâle texte secondaire*/
+   --color-text3: #FFB703; /* Jaune texte secondaire*/
 
+   /*  Font  family */
    --font-family1: 'Poppins', sans-serif;
-   --font-size-texte: 1.6rem;
+
+   /*  Font sizes mobile*/
    --font-size-logo: 4.5rem;
 
+   --font-size-h1: 3rem;
+   --font-size-h2: 2rem;
+   --font-size-h3: 1.8rem;
+
+   --font-size-p: 1.6rem;
+
+   --font-size-texte-contenu: 1.6rem;
+   --font-size-recit-pagination: 1.6rem;
+   --font-size-pages-pagination: 1.8rem;
+
+
+   /*  Height & width  mobile*/
    --height-elements: 45px;
    --width-elements:45px;
    --height-elements: 60px;
    --width-elements:60px;
 }
 
+/*  Desktop */
 @media (min-width: 600px) {
    :root{
-      --font-size-texte: 2.4rem;
-      --font-size-logo: 4.8rem;
+
+      /*  Height & width desktop*/
       --height-elements: 60px;
       --width-elements:60px;
+
+      /*  Font sizes desktop*/
+      --font-size-logo: 4.8rem;
+
+      --font-size-h1: 3.5rem;
+      --font-size-h2: 2.4rem;
+      --font-size-h3: 2rem;
+
+      --font-size-p: 2.4rem;
+
+      --font-size-texte-contenu: 2.4rem;
+      --font-size-recit-pagination: 2.4rem;
+      --font-size-pages-pagination: 2rem;
+
    }
+
  }
+
+
 
 * {
    font-size: 62.5%;
@@ -72,9 +152,6 @@
    line-height: 150%;
    font-family: var(--font-family1);
 }
-
-
-
 
 /* Utilitaires + navigation entete */
 
@@ -98,13 +175,6 @@ nav {
    }
  }
 
-
-
-a {
-   text-decoration: none;
-   color: var(--color-text1);
-}
-
 li {
    list-style-type: none;
 }
@@ -118,6 +188,9 @@ footer {
    line-height: 100%;
 }
 
+
+
+
 /*  Éléments de design graphiques */
 
 .compass {
@@ -130,21 +203,13 @@ footer {
    fill: #FB8500;
 }
 
-.logo {
-   font-size: var(--font-size-logo);
-   font-weight: bold;
-}
-
-
-
-
 
 /* Niveau 1 - Accueil
    ====================== */
 
    /*  Grid */
    @media (min-width: 600px) {
-   .box {
+   .main-accueil {
       display: grid;
       grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
       grid-gap: 1em;
@@ -173,7 +238,7 @@ footer {
   }
   .c {
    grid-area: c;
-   margin-top: 10vh;
+   margin-top: 5vh;
    margin-bottom: 10vh;
   }
   .d {
@@ -213,22 +278,18 @@ footer {
   }
 
 }
-  .m20-home {
+  .accueil {
    max-width: 1000px;
    margin-left: auto;
    margin-right: auto;
    background-color: var(--color-main);
-   color: var(--color-text1);
-   font-size: var(--font-size-texte);
 }
 
-.m20-home p {
-   font-size: var(--font-size-texte);
+@media (min-width: 600px) {
+.section2 {
+   flex-wrap: nowrap;
 }
-.m20-home p b {
-   font-size: var(--font-size-texte);
 }
-
 .section2 {
    display: flex;
    justify-content: space-evenly;
@@ -237,17 +298,15 @@ footer {
    margin-top: 2em;
    margin-bottom: 5em;
    background-color: #132A35;
+   flex-wrap: wrap;
 }
 
 .col1, .col2, .col3 {
-   width: 333.333333333333333px;
+   max-width: 300px;
 }
 
-.h2-home {
-   font-size: 2.8rem;
-   text-align: center;
-   color: var(--color-secondary1);
-}
+
+/*  Bouton CTA "Lancer l'exposition" */
 
 .btn {
    background: #FFB703;
@@ -260,7 +319,7 @@ footer {
    -moz-border-radius: 28;
    border-radius: 28px;
    color: #132A35;
-   font-size: 20px;
+   font-size: var(--font-size-p);
    background: #FFB703;
    padding: 10px 20px 10px 20px;
    text-decoration: none;
@@ -335,26 +394,6 @@ footer {
    justify-content: center;
    align-items: center;
 }
-
-.texte {
-   font-size: var(--font-size-texte);
-   color: var(--color-text1);
-}
-
-/*  Pagination bas de page  (footer) */
-
-   .pages {
-      color: var(--color-text2);
-      font-size: 1.8rem;
-      margin: 0;
-   }
-   
-   .recit {
-      margin: 0;
-      color: var(--color-text1);
-      font-size: 2.4rem;
-      margin-top: .5em;
-   }
 
    
 
