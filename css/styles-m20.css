@@ -58,6 +58,11 @@ a {
    color: var(--color-text1);
 }
 
+a:hover {
+   text-decoration: none;
+   color: var(--color-text3);
+}
+
 .logo {
    font-size: var(--font-size-logo);
    font-weight: bold;
@@ -140,6 +145,9 @@ a {
    --font-size-recit-pagination: 1.6rem;
    --font-size-pages-pagination: 1.8rem;
 
+   --font-size-nav-footer: 1.6rem;
+   --font-size-nav-footer-actif: 2rem;
+
 
    /*  Height & width  mobile*/
    --height-elements: 45px;
@@ -171,6 +179,10 @@ a {
       --font-size-recit-pagination: 2.4rem;
       --font-size-pages-pagination: 2rem;
 
+      --font-size-nav-footer: 2.8rem;
+      --font-size-nav-footer-actif: 3.2rem;
+
+
    }
 
 }
@@ -192,6 +204,19 @@ nav {
    max-height: 15vh;
    padding: 4em;
 }
+.nav--footer {
+   font-size: var(--font-size-nav-footer);
+   color: var(--color-text1);
+}
+.nav--link-actif {
+   color: var(--color-text3);
+   font-size: var(--font-size-nav-footer-actif);
+}
+
+.copy {
+   font-size: var(--font-size-pages-pagination);
+   color: var(--color-text1);
+}
 
 @media (min-width: 1000px) {
    nav {
@@ -203,8 +228,24 @@ li {
    list-style-type: none;
 }
 
-footer {
-   max-width: 1200px;
+.footer-accueil {
+   max-width: 1000px;
+margin: 10vh auto;
+}
+
+.footer-accueil .logo{
+padding: 0 0 5vh 0;
+}
+
+.footer-flex {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   flex-wrap: nowrap;
+}
+
+.footer-img-txt {
+   max-width: 1000px;
    margin-left: auto;
    margin-right: auto;
    text-align: center;
