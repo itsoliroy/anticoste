@@ -48,7 +48,7 @@ b {
 }
 
 .p,
-b {
+strong {
    font-size: var(--font-size-p);
    color: var(--color-text1);
 }
@@ -167,7 +167,7 @@ p {
    --font-size-nav-footer-actif: 3.2rem;
 
 
-   /*  Height & width  mobile*/
+   /*  Height & width  mobile (SVG) */
    --height-elements: 45px;
    --width-elements: 45px;
    --height-elements-nav: 60px;
