@@ -1,34 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Adapter le titre -->
     <title>Des pas et des prises - Page X de 15 - Anticoste - m20</title>
     <!-- Feuille de styles commune à tous -->
     <link rel="stylesheet" href="../css/styles.css">
-    <!-- Ajuster le href pour pointer sur la feuille de styles
-    du mandat en changeant le suffixe m20 -->
     <link rel="stylesheet" href="../css/styles-m20.css">
 </head>
-<!-- sur <body>: classe texte + nom de classe pour correspondre à votre mandat m01 à m13 -->
-<body class="texte m20">
 
-<!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
+<body class="texte m20 bg-img-txt">
 
-<main class="conteneur rangee">
-    <section class="texte__contenu cols_9_de_12">
-        <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dicta dolores iusto labore maxime molestias?
-            </p>
-        </blockquote>
-        <p class="texte__infos">
-            At consequatur cumque dolorum esse facere hic iste, magnam nam officia, perspiciatis quas sunt.
-        </p>
-    </section>
-</main>
+    <header role="banner">
+        <nav role="navigation">
+            <a href="">
+                <p class="logo">Anticoste</p>
+            </a>
+            <ul>
+                <li><a href=""><svg class="compass" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.86826 27.207L0.0764771 26.4575C2.50994 13.4058 13.4015 2.51265 26.4527 0.0775146L27.2028 3.86917C15.6615 6.02202 6.01957 15.6654 3.86826 27.207Z"
+                                fill="" />
+                            <path
+                                d="M62.1317 27.2068C59.9801 15.6629 50.3348 6.0185 38.791 3.86771L39.5401 0.0759277C52.5946 2.50874 63.4895 13.4031 65.9234 26.4573L62.1317 27.2068Z"
+                                fill="" />
+                            <path
+                                d="M39.5404 65.924L38.7912 62.1322C50.3345 59.9815 59.9792 50.3381 62.1315 38.7952L65.9232 39.545C63.4886 52.5982 52.5938 63.4914 39.5404 65.924Z"
+                                fill="" />
+                            <path
+                                d="M26.4527 65.9227C13.4022 63.4877 2.51101 52.5956 0.0769043 39.545L3.86856 38.7952C6.02064 50.3359 15.6622 59.9783 27.2029 62.131L26.4527 65.9227Z"
+                                fill="" />
+                            <path d="M49.6081 23.7878L52.4517 13.5428L42.2021 16.3884L43.9718 22.0148L49.6081 23.7878Z"
+                                fill="" />
+                            <path d="M49.6116 42.2021L43.985 43.9717L42.212 49.6081L52.457 52.4517L49.6116 42.2021Z"
+                                fill="" />
+                            <path d="M23.7878 16.3918L13.5428 13.5482L16.3884 23.7978L22.0148 22.0282L23.7878 16.3918Z"
+                                fill="" />
+                            <path d="M16.3919 42.2122L13.5483 52.4572L23.7979 49.6118L22.0283 43.9852L16.3919 42.2122Z"
+                                fill="" />
+                            <path
+                                d="M33 30.9387C31.8634 30.9387 30.9386 31.8635 30.9386 33.0001C31.0518 35.7348 34.9485 35.734 35.0613 33.0001C35.0613 31.8635 34.1365 30.9387 33 30.9387Z"
+                                fill="" />
+                            <path
+                                d="M40.8894 25.0972L32.996 0L25.0972 25.1107L0 33.004L25.1107 40.9028L33.004 66L40.9028 40.8893L66 32.996L40.8894 25.0972ZM33 38.9265C29.7322 38.9265 27.0735 36.2678 27.0735 33C27.3991 25.1378 38.6021 25.1401 38.9265 33C38.9265 36.2678 36.2678 38.9265 33 38.9265Z"
+                                fill="" />
+                        </svg>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-img-txt" role="main">
 
-<!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
+        <div class="arrow-left">
+            <a href="">
+                <svg class="arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path
+                            d="M74.7037 98.694C76.6181 96.8892 76.6894 93.8701 74.8894 91.9653L35.1314 49.9975L74.8892 8.03461C76.6941 6.12977 76.6179 3.11539 74.7035 1.30586C72.794 -0.503667 69.7796 -0.42281 67.9701 1.48691L25.1119 46.7261C24.2451 47.6403 23.807 48.8213 23.807 49.9975C23.807 51.1736 24.2451 52.3594 25.1119 53.2738L67.9701 98.513C69.7798 100.423 72.794 100.504 74.7037 98.694Z"
+                            fill="" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="100" height="100" transform="translate(100) rotate(90)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+
+        <div class="contenu">
+            <p class="texte-contenu">L’île d’Anticosti serait le paradis des chasseurs si on laissait ces derniers
+                pénétrer à volonté sur ce territoire, car grâce à M. Henri Menier l’île est devenue aussi giboyeuse que
+                les rivières et les lacs, poissonneux. M. Menier avait importé sur son île quelques couples de castors
+                qui se sont parfaitement acclimatés. Il avait aussi importé, à grands frais, des orignaux, des caribous
+                et des chevreuils.</p>
+        </div>
+
+        <div class="arrow-right">
+            <a href="">
+                <svg class="arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path
+                            d="M25.2963 98.694C23.3819 96.8892 23.3106 93.8701 25.1106 91.9653L64.8686 49.9975L25.1108 8.03461C23.3059 6.12977 23.3821 3.11539 25.2965 1.30586C27.206 -0.503667 30.2204 -0.42281 32.0299 1.48691L74.8881 46.7261C75.7549 47.6403 76.193 48.8213 76.193 49.9975C76.193 51.1736 75.7549 52.3594 74.8881 53.2738L32.0299 98.513C30.2202 100.423 27.206 100.504 25.2963 98.694Z"
+                            fill="" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="100" height="100" transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+
+    </main>
+    <footer role="contentinfo" class="footer-img-txt">
+        <p class="recit-pagination">Des pas et des prises</p>
+        <p class="pages-pagination">Page 14 sur 17</p>
+    </footer>
+
+
 
 </body>
+
 </html>

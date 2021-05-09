@@ -4,35 +4,413 @@
  * @author Olivier Roy <2066237@csfoy.ca>
  *
  * TABLE DES MATIERES
- * Charte typographique
- * Styles de base
+ * Typographie
+ ******* Setup typo
+ * Styles de base et reset normalize
  * Grille de mise en page
- * Navigations
+ * Variables  & Font sizes, family, weight, line-height, etc.
+ ******* Utilitaires + navigation entete
+ ******* Éléments de design graphiques
  *** Niveau 1 - Accueil
+ ******* Grid
+ ******* Grid names
  *** Niveau 1 - Rose des vents
  *** Niveau 1 - Crédits
  *** Niveau 2 - Gabarit page Titre
- *** Niveau 2 - Gabarit page Photo
- *** Niveau 2 - Gabarit page Texte
+ *** Niveau 2 - Gabarit pages Photo et texte
+ ******* Background pages photo et texte
+ ******* Navigation contenu
+ ******* Contenu
  */
 
-/* Charte typographique
+/* Typographie
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+/*  Setup typo */
+.h1 {
+   font-size: var(--font-size-h1);
+   color: var(--color-text1);
+}
 
-/* Styles de base
+.h2 {
+   font-size: var(--font-size-h2);
+   color: var(--color-text3);
+}
+
+.h3 {
+   font-size: var(--font-size-h3);
+   color: var(--color-text1);
+}
+
+b {
+   font-weight: bold;
+}
+
+.p,
+b {
+   font-size: var(--font-size-p);
+   color: var(--color-text1);
+}
+
+a {
+   text-decoration: none;
+   color: var(--color-text1);
+}
+
+a:hover {
+   text-decoration: none;
+   color: var(--color-text3);
+}
+
+.logo {
+   font-size: var(--font-size-logo);
+   font-weight: bold;
+   color: var(--color-text1);
+}
+
+.texte-contenu {
+   font-size: var(--font-size-texte-contenu);
+   color: var(--color-text1);
+}
+
+.recit-pagination {
+   font-size: var(--font-size-recit-pagination);
+   color: var(--color-text1);
+   margin: 0;
+   margin-top: .5em;
+}
+
+.pages-pagination {
+   font-size: var(--font-size-pages-pagination);
+   color: var(--color-text2);
+   margin: 0;
+}
+
+.txt-center {
+   text-align: center;
+}
+
+/* Styles de base,  basic reset  & reset normalize
    ========================================================================== */
+/* @import "normalize.css"; */
+/* @import "utilitaires.css"; */
 
-
-/* Navigations
-   ========================================================================== */
-
+* {
+   padding: 0;
+   margin: 0;
+   font-size: 62.5%;
+   font-weight: 400;
+   line-height: 150%;
+   font-family: var(--font-family1);
+}
 
 /* Grille de mise en page
    ========================================================================== */
+/* @import "grille.css"; */
+
+
+/* Variables  & Font sizes, family, weight, line-height, etc.   !!!!!! MOBILE FIRST !!!!!!
+   ========================================================================== */
+:root {
+   /*  Colors */
+   --color-main: #0F242F;
+   /* bleu foncé*/
+   --color-secondary1: #FFB703;
+   /* Jaune éléments intéractifs*/
+   --color-secondary2: #FB8500;
+   /* Orange HOVER éléments intéractifs*/
+   --color-text1: #FFF;
+   /* Blanc texte principale*/
+   --color-text2: #8ECAE6;
+   /* Bleu pâle texte secondaire*/
+   --color-text3: #FFB703;
+   /* Jaune texte secondaire*/
+
+   /*  Font  family */
+   --font-family1: 'Poppins', sans-serif;
+
+   /*  MOBILE */
+
+   /*  Font sizes mobile*/
+   --font-size-logo: 4.5rem;
+
+   --font-size-h1: 3rem;
+   --font-size-h2: 2rem;
+   --font-size-h3: 1.8rem;
+
+   --font-size-p: 1.6rem;
+
+   --font-size-texte-contenu: 1.6rem;
+   --font-size-recit-pagination: 1.6rem;
+   --font-size-pages-pagination: 1.8rem;
+
+   --font-size-nav-footer: 1.6rem;
+   --font-size-nav-footer-actif: 2rem;
+
+
+   /*  Height & width  mobile*/
+   --height-elements: 45px;
+   --width-elements: 45px;
+   --height-elements-nav: 60px;
+   --width-elements-nav: 60px;
+}
+
+/*  DESKTOP */
+@media (min-width: 600px) {
+   :root {
+
+      /*  Height & width desktop*/
+      --height-elements: 60px;
+      --width-elements: 60px;
+      --height-elements-nav: 100px;
+      --width-elements-nav: 100px;
+
+      /*  Font sizes desktop*/
+      --font-size-logo: 4.8rem;
+
+      --font-size-h1: 3.5rem;
+      --font-size-h2: 2.4rem;
+      --font-size-h3: 2rem;
+
+      --font-size-p: 2.4rem;
+
+      --font-size-texte-contenu: 2.4rem;
+      --font-size-recit-pagination: 2.4rem;
+      --font-size-pages-pagination: 2rem;
+
+      --font-size-nav-footer: 2.8rem;
+      --font-size-nav-footer-actif: 3.2rem;
+
+
+   }
+
+}
+
+
+/* Utilitaires + navigation entete */
+
+header {
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 5vh;
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-height: 15vh;
+   padding: 4em;
+}
+.nav--footer {
+   font-size: var(--font-size-nav-footer);
+   color: var(--color-text1);
+}
+.nav--link-actif {
+   color: var(--color-text3);
+   font-size: var(--font-size-nav-footer-actif);
+}
+
+.copy {
+   font-size: var(--font-size-pages-pagination);
+   color: var(--color-text1);
+}
+
+@media (min-width: 1000px) {
+   nav {
+      padding: 0;
+   }
+}
+
+li {
+   list-style-type: none;
+}
+
+.footer-accueil {
+   max-width: 1000px;
+margin: 10vh auto;
+}
+
+.footer-accueil .logo{
+padding: 0 0 5vh 0;
+}
+
+.footer-flex {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   flex-wrap: nowrap;
+}
+
+.footer-img-txt {
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   max-height: 10vh;
+   line-height: 100%;
+}
+
+
+
+
+/*  Éléments de design graphiques */
+
+.compass {
+   fill: #FFB703;
+   width: var(--width-elements);
+   height: var(--height-elements);
+}
+
+.compass:hover {
+   fill: #FB8500;
+}
+
+
 /* Niveau 1 - Accueil
    ====================== */
 
+.bg-accueil {
+   background: url(/images/m20/vii-header-m20.jpg) no-repeat scroll;
+   background-position: top;
+   background-size: 100vw;
+}
+
+/*  Grid */
+@media (min-width: 600px) {
+   .grid-accueil {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
+      grid-gap: 1em;
+      grid-template-areas:
+         ". a a a a "
+         ". b b b ."
+         ". . c . ."
+         "e e d d d"
+         "f f f g g"
+
+   }
+
+   /*  Grid names */
+
+   .grid-a {
+      grid-area: a;
+      margin-top: 20vh;
+      margin-bottom: 5vh;
+   }
+
+   .grid-b {
+      grid-area: b;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+   }
+
+   .grid-c {
+      grid-area: c;
+      margin-top: 5vh;
+      margin-bottom: 10vh;
+   }
+
+   .grid-d {
+      grid-area: d;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+   }
+
+   .grid-e {
+      grid-area: e;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+   }
+
+   .grid-f {
+      grid-area: f;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+   }
+
+   .grid-g {
+      grid-area: g;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+   }
+
+}
+
+.accueil {
+   background-color: var(--color-main);
+}
+
+.section1 {
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.section2 {
+   background-color: #132A35;
+   padding: 10vh 0;
+   margin: 0;
+}
+
+@media (min-width: 600px) {
+   .section-cols {
+      flex-wrap: nowrap;
+   }
+}
+
+.section-cols {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: flex-start;
+   text-align: center;
+   margin-top: 5vh;
+   margin-bottom: 5em;
+   flex-wrap: wrap;
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.col1,
+.col2,
+.col3 {
+   max-width: 300px;
+}
+
+
+/*  Bouton CTA "Lancer l'exposition" */
+
+.btn {
+   background: #FFB703;
+   -webkit-border-radius: 28;
+   -moz-border-radius: 28;
+   border-radius: 28px;
+   color: #132A35;
+   font-size: var(--font-size-p);
+   background: #FFB703;
+   padding: 10px 20px 10px 20px;
+   text-decoration: none;
+   border: none;
+   width: fit-content;
+   margin-top: 2em;
+}
+
+.btn:hover {
+   background: #FB8500;
+   text-decoration: none;
+}
+
+.btn-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   margin-left: auto;
+   margin-right: auto;
+}
 
 /* Niveau 1 - Rose des vents
    ====================== */
@@ -46,12 +424,54 @@
    ====================== */
 
 
-/* Niveau 2 - Gabarit page Photo
+/* Niveau 2 - Gabarit pages Photo et texte
    ====================== */
 
+/* Background pages photo et texte */
+.main-img-txt {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+}
 
-/* Niveau 2 - Gabarit page Texte
-   ====================== */
+.bg-img-txt {
+   background: url(/images/m20/vii-img-m20.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
 
+/*  Navigation contenu */
 
+.arrow-left,
+.arrow-right {
+   max-width: 200px;
+}
 
+.arrow {
+   fill: #FFB703;
+   width: var(--width-elements-nav);
+   height: var(--height-elements-nav);
+}
+
+.arrow:hover {
+   fill: #FB8500;
+}
+
+/*  Contenu */
+
+.contenu {
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100vh;
+   height: 70vh;
+   /* background-color: #FB8500; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
