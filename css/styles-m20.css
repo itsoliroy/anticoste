@@ -319,6 +319,8 @@ padding: 0 0 .5em 0;
 }
 
 
+
+
 /* Niveau 1 - Accueil
    ====================== */
 
@@ -370,16 +372,22 @@ display: none;
    .grid-c {
       display: block;
       grid-area: c;
-      margin-top: 5vh;
-      margin-bottom: 10vh;
+      /* margin-top: 5vh;
+      margin-bottom: 10vh; */
       /* transform: translate(0%, -50%); */
+      text-align: center;
 
    }
+
 
    .grid-d {
       grid-area: d;
       margin-top: 10vh;
       margin-bottom: 10vh;
+      padding-left: 10em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
    }
 
    .grid-e {
@@ -392,6 +400,10 @@ display: none;
       grid-area: f;
       margin-top: 10vh;
       margin-bottom: 10vh;
+      padding-right: 10em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
    }
 
    .grid-g {
@@ -422,7 +434,9 @@ display: none;
 }
 
 
-
+img{
+   max-width: 100%;
+}
 
 
 @media (min-width: 600px) {
@@ -471,7 +485,6 @@ display: none;
    padding: 10px 20px 10px 20px;
    text-decoration: none;
    border: none;
-   width: fit-content;
    margin-top: 2em;
    align-self: center;
 }
